@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yass Bloom – صواني خطوبة فاخرة</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: #fffcf9;
+            color: #3e3e3e;
+        }
+        h1, h2, h3, .gold-text {
+            font-family: 'Playfair Display', serif;
+        }
+        :root {
+            --cream: #fef9f2;
+            --gold: #c5a47a;
+            --gold-light: #e4d2bc;
+            --rose: #f9e0e0;
+            --charcoal: #4a4a4a;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--gold-light);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        #logo-img {
+            max-height: 65px;
+            width: auto;
+        }
+        .logo-fallback {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-fallback i {
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+        .logo-fallback span {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+        .social-header a {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin: 0 10px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .social-header a:hover {
+            color: #b38e60;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: linear-gradient(145deg, #fff3ec, #fffbf7);
+            border-radius: 0 0 60px 60px;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hero-text {
+            flex: 1 1 300px;
+        }
+        .hero-text h1 {
+            font-size: 3rem;
+            color: var(--gold);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 1.4rem;
+            color: #6e6e6e;
+            margin-bottom: 10px;
+        }
+        .hero-social {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .hero-social a {
+            color: var(--gold);
+            font-size: 2.8rem;
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(197,164,122,0.3);
+            border: 2px solid var(--gold-light);
+            transition: 0.3s;
+        }
+        .hero-social a:hover {
+            transform: scale(1.1);
+            background: var(--gold);
+            color: white;
+        }
+        .hero-video-placeholder {
+            flex: 1 1 300px;
+            background: url('https://placehold.co/800x500/fae8dd/c5a47a?text=Yass+Bloom') center/cover no-repeat;
+            border-radius: 30px;
+            min-height: 320px;
+            border: 5px solid white;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(197, 164, 122, 0.15);
+            transition: 0.25s;
+            border: 1px solid rgba(229, 210, 190, 0.3);
+            cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 35px rgba(197, 164, 122, 0.25);
+        }
+        .product-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--gold-light);
+        }
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 1.6rem;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .old-price {
+            font-size: 1.2rem;
+            color: #aaa;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        .discount-badge {
+            background: #e6b0aa;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .product-detail {
+            display: none;
+            background: white;
+            border-radius: 60px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+        .detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .detail-image {
+            flex: 1 1 400px;
+        }
+        .detail-image img {
+            width: 100%;
+            border-radius: 40px;
+            border: 3px solid var(--gold-light);
+        }
+        .detail-info {
+            flex: 1 1 400px;
+        }
+        .detail-info h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        .detail-price {
+            font-size: 2.2rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .detail-desc {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .detail-old-price {
+            font-size: 1.4rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 15px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0 30px;
+            flex-wrap: wrap;
+        }
+        .btn-add-cart {
+            flex: 1;
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 18px 25px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            min-width: 200px;
+        }
+        .btn-add-cart:hover {
+            background: #b38e60;
+        }
+        .btn-checkout-now {
+            flex: 1;
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 18px 25px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            min-width: 200px;
+        }
+        .btn-checkout-now:hover {
+            background: var(--gold-light);
+            color: white;
+        }
+        .btn-back {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .btn-back:hover {
+            background: var(--gold-light);
+        }
+        .cart-section {
+            background: #faf3ee;
+            border-radius: 50px;
+            padding: 40px;
+            margin: 40px 0;
+            scroll-margin-top: 100px;
+        }
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .cart-items {
+            margin: 30px 0;
+        }
+        .cart-row {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 40px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .cart-total {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 700;
+            border-top: 2px dashed var(--gold-light);
+            padding-top: 25px;
+        }
+        .checkout-form {
+            background: white;
+            padding: 30px;
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+        .form-row {
+            margin-bottom: 20px;
+        }
+        .form-row label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .form-row input, .form-row textarea {
+            width: 100%;
+            padding: 16px 25px;
+            border: 2px solid #f0e0d4;
+            border-radius: 60px;
+            background: #fffaf5;
+        }
+        .checkout-form button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            width: 100%;
+            cursor: pointer;
+        }
+        .admin-login-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .admin-box {
+            background: var(--cream);
+            padding: 40px;
+            border-radius: 50px;
+            max-width: 400px;
+            width: 90%;
+            border: 2px solid var(--gold);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            margin: 5px 0;
+        }
+        #admin-panel {
+            display: none;
+            background: #fefefe;
+            border-radius: 60px;
+            padding: 40px;
+            margin: 60px 0;
+            border: 3px solid var(--gold);
+            position: relative;
+        }
+        #closeAdminPanel {
+            position: absolute;
+            top: 20px; left: 30px;
+            background: #dcc4b0;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .admin-section {
+            background: #fff8f2;
+            border-radius: 30px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .product-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .url-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .url-input-group input {
+            padding: 12px 20px;
+            border: 2px solid var(--gold-light);
+            border-radius: 60px;
+            font-size: 1rem;
+        }
+        .url-input-group button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: fit-content;
+        }
+        .preview-image {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 20px;
+            border: 2px solid var(--gold);
+            margin-top: 10px;
+            object-fit: cover;
+        }
+        .order-card {
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gold-light);
+        }
+        .order-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-accepted { background: #d4edda; color: #155724; }
+        .status-rejected { background: #f8d7da; color: #721c24; }
+        .order-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-accept {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            flex: 1;
+        }
+        .btn-reject {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            flex: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--gold-light);
+            background: var(--cream);
+        }
+        .social-footer {
+            display: none;
+            gap: 25px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-footer a {
+            color: var(--gold);
+            font-size: 2rem;
+        }
+        @media (max-width: 768px) {
+            .social-header { display: none; }
+            .social-footer { display: flex; }
+            .hero-social a { width: 60px; height: 60px; font-size: 2rem; }
+            .button-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo-area" id="logoArea">
+                <div id="logoDisplay" class="logo-fallback">
+                    <i class="fas fa-rose"></i>
+                    <span>Yass Bloom</span>
+                </div>
+            </div>
+            <div class="social-header">
+                <a href="https://www.instagram.com/yass__bloom_?igsh=MTRoZ3FjN3doY3ljbw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@yass.bloom01?_r=1&_t=ZS-94F0H5iNVKB" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>صواني خطوبة مصمّمة بحب <br>وعلى ذوقك</h1>
+                    <p>✨ خلّي مناسبتك تزيد تلمع مع Yass Bloom</p>
+                    <p class="highlight">اطلب توّا وخلي لمستك الخاصة تحكي عليك</p>
+                    <p>🇹🇳 توصيل لكل ولايات تونس</p>
+                    <div class="hero-social">
+                        <a href="https://www.instagram.com/yass__bloom_?igsh=MTRoZ3FjN3doY3ljbw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@yass.bloom01?_r=1&_t=ZS-94F0H5iNVKB" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="hero-video-placeholder"></div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <h2 class="section-title">صواني الخطوبة</h2>
+        <div class="product-grid" id="productGrid"></div>
+
+        <!-- Product Detail Page -->
+        <div id="productDetailPage" class="product-detail">
+            <button class="btn-back" id="backToProducts"><i class="fas fa-arrow-right"></i> العودة للمنتجات</button>
+            <div class="detail-container" id="detailContainer"></div>
+        </div>
+
+        <!-- Cart & Checkout Section -->
+        <section class="cart-section" id="cartSection">
+            <div class="cart-header">
+                <h2 style="color: var(--gold);"><i class="fas fa-shopping-bag"></i> سلّة الشراء</h2>
+                <span id="cartCount">0</span>
+            </div>
+            <div id="cartItemsContainer" class="cart-items"></div>
+            <div class="cart-total" id="cartTotal">المجموع: 0 د.ت (بما في ذلك التوصيل 8 د.ت)</div>
+            
+            <div class="checkout-form" id="checkoutForm">
+                <h3 style="margin-bottom: 25px; color: var(--gold);">📝 معلومات الطلب</h3>
+                <div class="form-row">
+                    <label>الاسم الكامل *</label>
+                    <input type="text" id="name" placeholder="مثال: آية بن محمود">
+                </div>
+                <div class="form-row">
+                    <label>رقم الهاتف *</label>
+                    <input type="tel" id="phone" placeholder="مثال: 20 123 456">
+                </div>
+                <div class="form-row">
+                    <label>الولاية *</label>
+                    <input type="text" id="state" placeholder="تونس, صفاقس, سوسة ...">
+                </div>
+                <div class="form-row">
+                    <label>العنوان بالتفصيل *</label>
+                    <textarea id="address" placeholder="نهج, شارع, مدينة ..." rows="2"></textarea>
+                </div>
+                <div class="form-row">
+                    <label>✍️ شنو تحب تكتب على الصينية؟</label>
+                    <input type="text" id="personalText" placeholder="مثال: آية & محمد">
+                </div>
+                <button id="placeOrderBtn">إتمام الطلب</button>
+            </div>
+        </section>
+
+        <!-- Admin login trigger -->
+        <div style="text-align: center; margin: 15px 0;">
+            <span id="showAdminLogin" style="color: var(--gold-light); cursor: pointer; border-bottom: 1px dashed;">⛔ دخول المدير</span>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: var(--gold);">Yass Bloom – فخامة في التفاصيل</p>
+        <div class="social-footer">
+            <a href="https://www.instagram.com/yass__bloom_?igsh=MTRoZ3FjN3doY3ljbw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@yass.bloom01?_r=1&_t=ZS-94F0H5iNVKB" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <!-- Admin login modal -->
+    <div class="admin-login-overlay" id="adminLoginOverlay">
+        <div class="admin-box">
+            <h3 style="color: var(--gold);">تسجيل دخول المدير</h3>
+            <input type="email" id="adminEmail" placeholder="Email" value="rayanbenftima@gmail.com">
+            <input type="password" id="adminPass" placeholder="Password" value="rayanrayan">
+            <button class="btn-gold" id="adminLoginBtn">دخول</button>
+            <button class="btn-gold" id="closeAdminLogin" style="background: #bdbdbd;">إلغاء</button>
+        </div>
+    </div>
+
+    <!-- Admin panel -->
+    <div class="container" id="admin-panel">
+        <button id="closeAdminPanel"><i class="fas fa-times"></i></button>
+        <h2 style="color: var(--gold); margin-bottom: 30px;">لوحة التحكم</h2>
+        
+        <div class="admin-section">
+            <h3>🖼️ تغيير اللوقو (رابط URL)</h3>
+            <div class="url-input-group">
+                <input type="url" id="logoUrl" placeholder="أدخل رابط الصورة https://...">
+                <button id="updateLogoBtn">تحديث اللوقو</button>
+            </div>
+            <img id="logoPreview" class="preview-image" style="display: none;">
+        </div>
+        
+        <div class="admin-section">
+            <h3>➕ إضافة منتج جديد (رابط URL)</h3>
+            <div class="product-form">
+                <input type="text" id="newProdName" placeholder="اسم المنتج">
+                <input type="number" id="newProdPrice" placeholder="السعر (دينار)">
+                <input type="number" id="newProdDiscount" placeholder="خصم %" value="0">
+                <textarea id="newProdDesc" placeholder="وصف المنتج" rows="2"></textarea>
+                <input type="url" id="newProdImageUrl" placeholder="رابط الصورة https://...">
+                <button class="btn-gold" id="addProductBtn">إضافة المنتج</button>
+            </div>
+            <img id="newProductPreview" class="preview-image" style="display: none;">
+        </div>
+        
+        <div class="admin-section" id="adminProductList"></div>
+        <div class="admin-section" id="adminOrders"></div>
+    </div>
+
+    <script>
+        (function() {
+            // Product data
+            let products = [];
+            const savedProducts = localStorage.getItem('yassBloom_products');
+            if (savedProducts) {
+                products = JSON.parse(savedProducts);
+            } else {
+                products = [
+                    { id: 1, name: 'صينية كلاسيك ذهبي', price: 45, desc: 'صينية فخمة بنقش ذهبي ناعم، تناسب الأذواق الكلاسيكية.', img: 'https://placehold.co/600x400/fae8dd/c5a47a?text=ذهبية+كلاسيك', discount: 0 },
+                    { id: 2, name: 'صينية ورد حالمة', price: 52, desc: 'لون وردي خفيف مع إمكانية إضافة أسمائكم بتصميم أنيق.', img: 'https://placehold.co/600x400/f9e0e0/c5a47a?text=ورد+حالمة', discount: 10 },
+                    { id: 3, name: 'صينية ملكية', price: 68, desc: 'صواني مزينة بأحجار ذهبية وتفاصيل راقية للمناسبات الملكية.', img: 'https://placehold.co/600x400/efe2d7/c5a47a?text=ملكية+فاخرة', discount: 0 },
+                    { id: 4, name: 'صينية ناعمة', price: 39, desc: 'تصميم بسيط مع لمسات ذهبية خفيفة، أنيقة وعملية.', img: 'https://placehold.co/600x400/fce4e0/c5a47a?text=ناعمة', discount: 15 }
+                ];
+                localStorage.setItem('yassBloom_products', JSON.stringify(products));
+            }
+
+            let orders = [];
+            const savedOrders = localStorage.getItem('yassBloom_orders');
+            if (savedOrders) {
+                orders = JSON.parse(savedOrders);
+            }
+
+            let cart = [];
+
+            // DOM elements
+            const productGrid = document.getElementById('productGrid');
+            const detailPage = document.getElementById('productDetailPage');
+            const detailContainer = document.getElementById('detailContainer');
+            const backBtn = document.getElementById('backToProducts');
+            const cartSection = document.getElementById('cartSection');
+            const cartContainer = document.getElementById('cartItemsContainer');
+            const cartTotalSpan = document.getElementById('cartTotal');
+            const cartCount = document.getElementById('cartCount');
+            const placeOrderBtn = document.getElementById('placeOrderBtn');
+
+            // Helper
+            function getFinalPrice(prod) {
+                return prod.discount ? prod.price * (1 - prod.discount/100) : prod.price;
+            }
+
+            function saveProducts() {
+                localStorage.setItem('yassBloom_products', JSON.stringify(products));
+            }
+
+            function saveOrders() {
+                localStorage.setItem('yassBloom_orders', JSON.stringify(orders));
+            }
+
+            // Render products grid
+            function renderProducts() {
+                productGrid.innerHTML = '';
+                products.forEach(prod => {
+                    const finalPrice = getFinalPrice(prod);
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    let discountHtml = prod.discount ? `<span class="discount-badge">-${prod.discount}%</span>` : '';
+                    card.innerHTML = `
+                        <img src="${prod.img}" alt="${prod.name}" class="product-img" onerror="this.src='https://placehold.co/600x400/fae8dd/c5a47a?text=صورة+غير+متوفرة'">
+                        <div class="product-info">
+                            <h3>${prod.name}</h3>
+                            ${discountHtml}
+                            <div class="product-price">${finalPrice.toFixed(2)} د.ت</div>
+                        </div>
+                    `;
+                    card.addEventListener('click', () => showProductDetail(prod.id));
+                    productGrid.appendChild(card);
+                });
+            }
+
+            // Show product detail page
+            function showProductDetail(productId) {
+                const prod = products.find(p => p.id === productId);
+                if (!prod) return;
+                
+                const finalPrice = getFinalPrice(prod);
+                let priceHtml = prod.discount ? 
+                    `<span class="detail-price">${finalPrice.toFixed(2)} د.ت</span> <span class="detail-old-price">${prod.price} د.ت</span>` :
+                    `<span class="detail-price">${prod.price} د.ت</span>`;
+                
+                detailContainer.innerHTML = `
+                    <div class="detail-image">
+                        <img src="${prod.img}" alt="${prod.name}" onerror="this.src='https://placehold.co/600x400/fae8dd/c5a47a?text=صورة+غير+متوفرة'">
+                    </div>
+                    <div class="detail-info">
+                        <h2>${prod.name}</h2>
+                        ${priceHtml}
+                        <div class="detail-desc">${prod.desc}</div>
+                        
+                        <div class="button-group">
+                            <button class="btn-add-cart" id="addToCartFromDetail">
+                                <i class="fas fa-shopping-cart"></i> أضف للسلة (${finalPrice.toFixed(2)} د.ت)
+                            </button>
+                            <button class="btn-checkout-now" id="checkoutNowFromDetail">
+                                <i class="fas fa-credit-card"></i> متابعة الطلب
+                            </button>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding: 20px; background: #faf3ee; border-radius: 30px;">
+                            <p><i class="fas fa-truck"></i> التوصيل: 8 د.ت لكل الولايات</p>
+                            <p><i class="fas fa-pen"></i> يمكنك كتابة الاسم أو العبارة التي تريدها عند إتمام الطلب</p>
+                        </div>
+                    </div>
+                `;
+
+                productGrid.style.display = 'none';
+                document.querySelector('.section-title').style.display = 'none';
+                cartSection.style.display = 'none';
+                detailPage.style.display = 'block';
+
+                document.getElementById('addToCartFromDetail').addEventListener('click', () => {
+                    cart.push({...prod, finalPrice});
+                    renderCart();
+                    alert('✅ تمت الإضافة إلى السلة');
+                });
+
+                document.getElementById('checkoutNowFromDetail').addEventListener('click', () => {
+                    cart.push({...prod, finalPrice});
+                    renderCart();
+                    detailPage.style.display = 'none';
+                    productGrid.style.display = 'grid';
+                    document.querySelector('.section-title').style.display = 'block';
+                    cartSection.style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('checkoutForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                });
+            }
+
+            backBtn.addEventListener('click', () => {
+                detailPage.style.display = 'none';
+                productGrid.style.display = 'grid';
+                document.querySelector('.section-title').style.display = 'block';
+                cartSection.style.display = 'block';
+            });
+
+            // Render cart
+            function renderCart() {
+                cartContainer.innerHTML = '';
+                let total = 0;
+                cart.forEach((item, idx) => {
+                    total += item.finalPrice || item.price;
+                    cartContainer.innerHTML += `
+                        <div class="cart-row">
+                            <span>${item.name}</span>
+                            <span>${(item.finalPrice || item.price).toFixed(2)} د.ت 
+                                <i class="fas fa-trash" style="color:#c5a47a; margin-right:10px; cursor:pointer;" data-index="${idx}"></i>
+                            </span>
+                        </div>
+                    `;
+                });
+                document.querySelectorAll('.fa-trash').forEach(icon => {
+                    icon.addEventListener('click', (e) => {
+                        cart.splice(e.target.dataset.index, 1);
+                        renderCart();
+                    });
+                });
+                const subtotal = cart.reduce((acc, i) => acc + (i.finalPrice || i.price), 0);
+                const delivery = cart.length ? 8 : 0;
+                cartTotalSpan.innerText = `المجموع: ${(subtotal + delivery).toFixed(2)} د.ت (توصيل ${delivery} د.ت)`;
+                cartCount.innerText = cart.length;
+            }
+
+            // Place order
+            placeOrderBtn.addEventListener('click', () => {
+                if (!cart.length) { alert('السلة فارغة'); return; }
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const state = document.getElementById('state').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const personal = document.getElementById('personalText').value.trim();
+                if (!name || !phone || !state || !address) {
+                    alert('❌ يرجى تعبئة جميع الحقول الإجبارية');
+                    return;
+                }
+                
+                const newOrder = {
+                    id: Date.now(),
+                    name, phone, state, address,
+                    personalText: personal || 'بدون كتابة',
+                    items: cart.map(i => ({ name: i.name, price: i.finalPrice || i.price })),
+                    total: cart.reduce((a,i) => a + (i.finalPrice || i.price), 0) + 8,
+                    status: 'قيد الانتظار'
+                };
+                orders.push(newOrder);
+                saveOrders();
+                alert('🎉 تم إرسال الطلب');
+                cart = [];
+                renderCart();
+                document.getElementById('name').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('state').value = '';
+                document.getElementById('address').value = '';
+                document.getElementById('personalText').value = '';
+                
+                if (document.getElementById('admin-panel').style.display === 'block') {
+                    renderOrdersList();
+                }
+            });
+
+            // Admin login
+            const overlay = document.getElementById('adminLoginOverlay');
+            document.getElementById('showAdminLogin').addEventListener('click', () => overlay.style.display = 'flex');
+            document.getElementById('closeAdminLogin').addEventListener('click', () => overlay.style.display = 'none');
+            
+            document.getElementById('adminLoginBtn').addEventListener('click', () => {
+                const email = document.getElementById('adminEmail').value.trim();
+                const pass = document.getElementById('adminPass').value.trim();
+                if (email === 'rayanbenftima@gmail.com' && pass === 'rayanrayan') {
+                    document.getElementById('adminEmail').value = '';
+                    document.getElementById('adminPass').value = '';
+                    overlay.style.display = 'none';
+                    document.getElementById('admin-panel').style.display = 'block';
+                    renderAdminProducts();
+                    renderOrdersList();
+                } else {
+                    alert('❌ البريد الإلكتروني أو كلمة المرور غير صحيحة');
+                }
+            });
+
+            document.getElementById('closeAdminPanel').addEventListener('click', () => {
+                document.getElementById('admin-panel').style.display = 'none';
+            });
+
+            // Logo URL update
+            const logoUrlInput = document.getElementById('logoUrl');
+            const logoPreview = document.getElementById('logoPreview');
+            const updateLogoBtn = document.getElementById('updateLogoBtn');
+
+            updateLogoBtn.addEventListener('click', () => {
+                const url = logoUrlInput.value.trim();
+                if (url) {
+                    document.getElementById('logoDisplay').innerHTML = `<img src="${url}" id="logo-img" style="max-height:65px;" onerror="this.src='https://placehold.co/200/fffcf9/c5a47a?text=خطأ'">`;
+                    logoPreview.src = url;
+                    logoPreview.style.display = 'block';
+                    localStorage.setItem('yassBloom_logo', url);
+                    logoUrlInput.value = '';
+                } else {
+                    alert('الرجاء إدخال رابط الصورة');
+                }
+            });
+
+            // Product image URL preview
+            const newProdImageUrl = document.getElementById('newProdImageUrl');
+            const newProductPreview = document.getElementById('newProductPreview');
+            
+            newProdImageUrl.addEventListener('input', function() {
+                const url = this.value.trim();
+                if (url) {
+                    newProductPreview.src = url;
+                    newProductPreview.style.display = 'block';
+                } else {
+                    newProductPreview.style.display = 'none';
+                }
+            });
+
+            // Add product with URL
+            document.getElementById('addProductBtn').addEventListener('click', function() {
+                const name = document.getElementById('newProdName').value.trim();
+                const price = parseFloat(document.getElementById('newProdPrice').value);
+                const discount = parseInt(document.getElementById('newProdDiscount').value) || 0;
+                const desc = document.getElementById('newProdDesc').value.trim();
+                const imgUrl = document.getElementById('newProdImageUrl').value.trim();
+                
+                if (!name || !price || !desc || !imgUrl) { 
+                    alert('املأ جميع الحقول'); 
+                    return; 
+                }
+                
+                const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 5;
+                products.push({
+                    id: newId,
+                    name, price, desc, 
+                    img: imgUrl, 
+                    discount
+                });
+                saveProducts();
+                renderProducts();
+                renderAdminProducts();
+                
+                // Clear form
+                document.getElementById('newProdName').value = '';
+                document.getElementById('newProdPrice').value = '';
+                document.getElementById('newProdDiscount').value = '0';
+                document.getElementById('newProdDesc').value = '';
+                document.getElementById('newProdImageUrl').value = '';
+                newProductPreview.style.display = 'none';
+            });
+
+            function renderAdminProducts() {
+                const container = document.getElementById('adminProductList');
+                container.innerHTML = '<h3>✏️ تعديل / حذف المنتجات</h3>';
+                products.forEach(prod => {
+                    const div = document.createElement('div');
+                    div.style.cssText = 'display:flex; align-items:center; gap:15px; background:white; padding:15px; border-radius:60px; margin-bottom:15px; flex-wrap:wrap;';
+                    div.innerHTML = `
+                        <img src="${prod.img}" style="width:70px; height:70px; border-radius:35px; object-fit:cover;" onerror="this.src='https://placehold.co/70/fffcf9/c5a47a?text=خطأ'">
+                        <div style="flex:1;">${prod.name} - ${prod.price} د.ت ${prod.discount ? `(-${prod.discount}%)` : ''}</div>
+                        <div style="display:flex; gap:10px;">
+                            <button class="btn-gold" style="width:auto; padding:8px 20px;" data-id="${prod.id}" data-action="edit">تعديل</button>
+                            <button class="btn-gold" style="width:auto; padding:8px 20px; background:#b98b8b;" data-id="${prod.id}" data-action="delete">حذف</button>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+
+                document.querySelectorAll('[data-action="delete"]').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = parseInt(e.target.dataset.id);
+                        products = products.filter(p => p.id !== id);
+                        saveProducts();
+                        renderProducts();
+                        renderAdminProducts();
+                    });
+                });
+
+                document.querySelectorAll('[data-action="edit"]').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const prod = products.find(p => p.id === parseInt(e.target.dataset.id));
+                        if (!prod) return;
+                        
+                        const newName = prompt('الاسم الجديد', prod.name);
+                        if (newName) prod.name = newName;
+                        
+                        const newPrice = prompt('السعر الجديد', prod.price);
+                        if (newPrice) prod.price = parseFloat(newPrice);
+                        
+                        const newDiscount = prompt('نسبة الخصم (0 إن وجد)', prod.discount);
+                        if (newDiscount !== null) prod.discount = parseInt(newDiscount) || 0;
+                        
+                        const newImageUrl = prompt('رابط الصورة الجديد', prod.img);
+                        if (newImageUrl) prod.img = newImageUrl;
+                        
+                        saveProducts();
+                        renderProducts();
+                        renderAdminProducts();
+                    });
+                });
+            }
+
+            function renderOrdersList() {
+                const container = document.getElementById('adminOrders');
+                container.innerHTML = '<h3>📦 الطلبات الواردة</h3>';
+                
+                if (!orders.length) {
+                    container.innerHTML += '<p>لا توجد طلبات حالياً</p>';
+                    return;
+                }
+                
+                orders.forEach(order => {
+                    const orderDiv = document.createElement('div');
+                    orderDiv.className = 'order-card';
+                    
+                    let statusClass = 'status-pending';
+                    if (order.status === 'مقبول') statusClass = 'status-accepted';
+                    if (order.status === 'مرفوض') statusClass = 'status-rejected';
+                    
+                    orderDiv.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>طلب #${order.id}</strong>
+                            <span class="order-status ${statusClass}">${order.status || 'قيد الانتظار'}</span>
+                        </div>
+                        <p><i class="fas fa-user"></i> ${order.name} | ${order.phone}</p>
+                        <p><i class="fas fa-map-marker-alt"></i> ${order.state} - ${order.address}</p>
+                        <p><i class="fas fa-pen"></i> "${order.personalText}"</p>
+                        <p><i class="fas fa-box"></i> ${order.items.map(i => `${i.name} (${i.price} د.ت)`).join(' - ')}</p>
+                        <p><i class="fas fa-coins"></i> <strong>المجموع: ${order.total} د.ت</strong></p>
+                    `;
+                    
+                    if (!order.status || order.status === 'قيد الانتظار') {
+                        const actionsDiv = document.createElement('div');
+                        actionsDiv.className = 'order-actions';
+                        actionsDiv.innerHTML = `
+                            <button class="btn-accept" data-id="${order.id}"><i class="fas fa-check"></i> قبول</button>
+                            <button class="btn-reject" data-id="${order.id}"><i class="fas fa-times"></i> رفض</button>
+                        `;
+                        orderDiv.appendChild(actionsDiv);
+                    }
+                    
+                    container.appendChild(orderDiv);
+                });
+                
+                document.querySelectorAll('.btn-accept').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const orderId = parseInt(e.target.dataset.id);
+                        const order = orders.find(o => o.id === orderId);
+                        if (order) {
+                            order.status = 'مقبول';
+                            saveOrders();
+                            renderOrdersList();
+                            alert('✅ تم قبول الطلب');
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('.btn-reject').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const orderId = parseInt(e.target.dataset.id);
+                        const order = orders.find(o => o.id === orderId);
+                        if (order) {
+                            order.status = 'مرفوض';
+                            saveOrders();
+                            renderOrdersList();
+                            alert('❌ تم رفض الطلب');
+                        }
+                    });
+                });
+            }
+
+            // Check for saved logo
+            const savedLogo = localStorage.getItem('yassBloom_logo');
+            if (savedLogo) {
+                document.getElementById('logoDisplay').innerHTML = `<img src="${savedLogo}" id="logo-img" style="max-height:65px;">`;
+                logoPreview.src = savedLogo;
+                logoPreview.style.display = 'block';
+            }
+
+            // Initial render
+            renderProducts();
+            renderCart();
+        })();
+    </script>
+</body>
+</html>
